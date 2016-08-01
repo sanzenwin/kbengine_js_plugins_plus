@@ -1,0 +1,2 @@
+# kbengine_js_plugins_plus
+解决原kbengine js插件在win32平台下出现的分包问题
