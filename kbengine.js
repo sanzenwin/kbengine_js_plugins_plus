@@ -19,8 +19,7 @@ KBEngine.init = function() {
 	KBEngine.create(args);
 
 	var Client_onImportClientMessages = KBEngine.app.Client_onImportClientMessages;
-	KBEngine.app.Client_onImportClientMessages = function(msg)
-	{
+	KBEngine.app.Client_onImportClientMessages = function(msg){
 		var package = KBEngine.splicePackage['Client_onImportClientMessages'];
 		if(package){
 			var newData = mergeArrayBuffers(package.data, msg.data);
@@ -52,8 +51,7 @@ KBEngine.init = function() {
 		}
 	}
 
-	KBEngine.app.onmessage = function(msg)
-	{
+	KBEngine.app.onmessage = function(msg){
 		var package = KBEngine.splicePackage['onmessage'];
 		if(package){
 			msg.data = mergeArrayBuffers(package.data, msg.data);
